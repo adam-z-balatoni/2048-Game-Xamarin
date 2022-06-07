@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GameProject.HighScorePage">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="Beige">
+            <Label Text="High Scores" HorizontalOptions="Center" FontSize="28" Margin="20" TextColor="Black"/>
+            <Button Text="Main Menu" Clicked="MainMenu_Clicked" Margin="120,10" CornerRadius="6" BackgroundColor="BurlyWood"/>
+            <Button Text="Update High Scores" Clicked="ShowHighScores_Clicked" Margin="120,10" CornerRadius="6" BackgroundColor="BurlyWood"/>
+
+            <Label x:Name="_highScore01" Text="1. " FontSize="28" Margin="20" HorizontalOptions="Center" TextColor="Black"/>
+            <Label x:Name="_highScore02" Text="2. " FontSize="28" Margin="20" HorizontalOptions="Center" TextColor="Black"/>
+            <Label x:Name="_highScore03" Text="3. " FontSize="28" Margin="20" HorizontalOptions="Center" TextColor="Black"/>
+            <Label x:Name="_highScore04" Text="4. " FontSize="28" Margin="20" HorizontalOptions="Center" TextColor="Black"/>
+            <Label x:Name="_highScore05" Text="5. " FontSize="28" Margin="20" HorizontalOptions="Center" TextColor="Black"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

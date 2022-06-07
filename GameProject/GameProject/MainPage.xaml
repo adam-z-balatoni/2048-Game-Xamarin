@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GameProject.MainPage">
+
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="Beige">
+            <Label Text="2048" HorizontalOptions="Center" FontSize="Header" TextColor="Black"/>
+            <Image Source="minta.png" Margin="10"/>
+            <Label Text="Game Size: 4 x 4" HorizontalOptions="Center" FontSize="18" Margin="0,15" TextColor="Black"/>
+            <Button Text="Play Game" Clicked="PlayGame_Clicked" Margin="120,10" CornerRadius="6" BackgroundColor="BurlyWood"/>
+            <Button Text="High Scores" Clicked="HighScores_Clicked" Margin="120,10" CornerRadius="6" BackgroundColor="BurlyWood"/>
+        </StackLayout>
+    </ContentPage.Content>
+
+</ContentPage>

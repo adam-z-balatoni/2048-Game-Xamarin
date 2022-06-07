@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GameProject.GamePage">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="Beige">
+            <Label Text="2048" HorizontalOptions="Center" FontSize="28" Margin="20" TextColor="Black"/>
+
+            <!--Score-->
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="80"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Label x:Name="_scoreLabel" Grid.Row="0" Grid.Column="0" Text="Score:" 
+                       HorizontalOptions="Center" FontSize="20" Margin="20" TextColor="Black"/>
+                <!--<Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Score: " />
+                            <Span Text="{Binding Score}" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>-->
+                <Label x:Name="_highScoreLabel" Grid.Row="0" Grid.Column="2" Text="HighScore:" 
+                       HorizontalOptions="Center" FontSize="20" Margin="20" TextColor="Black"/>
+                <!--<Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="High Score: " />
+                            <Span Text="{Binding HighScore}" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>-->
+            </Grid>
+
+
+            <!--Game Grid-->
+            <Grid Margin="10" BackgroundColor="Bisque" RowSpacing="2" ColumnSpacing="2">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="90"/>
+                    <RowDefinition Height="90"/>
+                    <RowDefinition Height="90"/>
+                    <RowDefinition Height="90"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="90"/>
+                    <ColumnDefinition Width="90"/>
+                    <ColumnDefinition Width="90"/>
+                    <ColumnDefinition Width="90"/>
+                </Grid.ColumnDefinitions>
+
+                <!--<Grid.GestureRecognizers>
+                    <SwipeGestureRecognizer Command="{Binding MoveAction}" CommandParameter="{Binding}" Direction="Up"/>
+                    <SwipeGestureRecognizer Command="{Binding MoveAction}" CommandParameter="{Binding}" Direction="Left"/>
+                    <SwipeGestureRecognizer Command="{Binding MoveAction}" CommandParameter="{Binding}" Direction="Down"/>
+                    <SwipeGestureRecognizer Command="{Binding MoveAction}" CommandParameter="{Binding}" Direction="Right"/>
+                </Grid.GestureRecognizers>-->
+                <!--<Grid.Triggers>
+                    <DataTrigger TargetType="Image" Binding="{Binding BlockImage}" Value="1">
+                        <Setter Property="Source" Value="imageReference"/>
+                    </DataTrigger>
+                </Grid.Triggers>-->
+
+                <!--Row 1-->
+                <Image x:Name="Block00" Grid.Row="0" Grid.Column="0" Source="" Scale="2.4"/>
+                <Image x:Name="Block01" Grid.Row="0" Grid.Column="1" Source="" Scale="2.4"/>
+                <Image x:Name="Block02" Grid.Row="0" Grid.Column="2" Source="" Scale="2.4"/>
+                <Image x:Name="Block03" Grid.Row="0" Grid.Column="3" Source="" Scale="2.4"/>
+
+                <!--Row 2-->
+                <Image x:Name="Block04" Grid.Row="1" Grid.Column="0" Source="" Scale="2.4"/>
+                <Image x:Name="Block05" Grid.Row="1" Grid.Column="1" Source="" Scale="2.4"/>
+                <Image x:Name="Block06" Grid.Row="1" Grid.Column="2" Source="" Scale="2.4"/>
+                <Image x:Name="Block07" Grid.Row="1" Grid.Column="3" Source="" Scale="2.4"/>
+
+                <!--Row 3-->
+                <Image x:Name="Block08" Grid.Row="2" Grid.Column="0" Source="" Scale="2.4"/>
+                <Image x:Name="Block09" Grid.Row="2" Grid.Column="1" Source="" Scale="2.4"/>
+                <Image x:Name="Block10" Grid.Row="2" Grid.Column="2" Source="" Scale="2.4"/>
+                <Image x:Name="Block11" Grid.Row="2" Grid.Column="3" Source="" Scale="2.4"/>
+
+                <!--Row 4-->
+                <Image x:Name="Block12" Grid.Row="3" Grid.Column="0" Source="" Scale="2.4"/>
+                <Image x:Name="Block13" Grid.Row="3" Grid.Column="1" Source="" Scale="2.4"/>
+                <Image x:Name="Block14" Grid.Row="3" Grid.Column="2" Source="" Scale="2.4"/>
+                <Image x:Name="Block15" Grid.Row="3" Grid.Column="3" Source="" Scale="2.4"/>
+            </Grid>
+
+
+            <!--Controls-->
+            <Grid HorizontalOptions="Center">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="80"/>
+                    <RowDefinition Height="80"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="80"/>
+                    <ColumnDefinition Width="80"/>
+                    <ColumnDefinition Width="80"/>
+                </Grid.ColumnDefinitions>
+
+                <Button Grid.Row="0" Grid.Column="0" Text="Main Menu" Clicked="MainMenu_Clicked" BackgroundColor="BurlyWood" />
+                <Button Grid.Row="0" Grid.Column="2" Text="Reset" Clicked="Reset_Clicked" BackgroundColor="BurlyWood" />
+
+                <Button Grid.Row="0" Grid.Column="1" Text="UP" Clicked="UP_Clicked" BackgroundColor="Aqua"/>
+                <Button Grid.Row="1" Grid.Column="0" Text="LEFT" Clicked="LEFT_Clicked" BackgroundColor="Aqua"/>
+                <Button Grid.Row="1" Grid.Column="1" Text="DOWN" Clicked="DOWN_Clicked" BackgroundColor="Aqua"/>
+                <Button Grid.Row="1" Grid.Column="2" Text="RIGHT" Clicked="RIGHT_Clicked" BackgroundColor="Aqua"/>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
